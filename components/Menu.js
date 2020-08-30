@@ -1,22 +1,25 @@
 import React from 'react'
 import { useI18n } from '../utils/I18nContext'
 import lang from './Menu.lang.json'
+import Link from 'next/link'
 
 const Menu = () => {
-  const { t } = useI18n(lang)
+  const { t, p } = useI18n(lang)
   return (
     <React.Fragment>
       <div className='relative pt-6 px-4 sm:px-6 lg:px-8'>
         <nav className='relative flex items-center justify-between sm:h-10 lg:justify-start'>
           <div className='flex items-center flex-grow flex-shrink-0 lg:flex-grow-0'>
             <div className='flex items-center justify-between w-full md:w-auto'>
-              <a href='#' aria-label='Home'>
-                <img
-                  className='h-8 w-auto sm:h-10'
-                  src='./projetoparabens-v4.png'
-                  alt='Projeto Parabéns'
-                />
-              </a>
+              <Link href={p('home')}>
+                <a aria-label='Home'>
+                  <img
+                    className='h-8 w-auto sm:h-10'
+                    src='/projetoparabens-v4.png'
+                    alt='Projeto Parabéns'
+                  />
+                </a>
+              </Link>
               <div className='-mr-2 flex items-center md:hidden'>
                 <button
                   type='button'
@@ -43,30 +46,26 @@ const Menu = () => {
             </div>
           </div>
           <div className='hidden md:block md:ml-10 md:pr-4'>
-            <a
-              href='#'
-              className='font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out'
-            >
-              {t('about')}
-            </a>
-            <a
-              href='#'
-              className='ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out'
-            >
-              {t('supporters')}
-            </a>
-            <a
-              href='#'
-              className='ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out'
-            >
-              {t('beAVolunteer')}
-            </a>
-            <a
-              href='#'
-              className='ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out'
-            >
-              {t('donate')}
-            </a>
+            <Link href={p('about')}>
+              <a className='font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out'>
+                {t('about')}
+              </a>
+            </Link>
+            <Link href={p('supporters')}>
+              <a className='ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out'>
+                {t('supporters')}
+              </a>
+            </Link>
+            <Link href={p('beAVolunteer')}>
+              <a className='ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out'>
+                {t('beAVolunteer')}
+              </a>
+            </Link>
+            <Link href={p('donate')}>
+              <a className='ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out'>
+                {t('donate')}
+              </a>
+            </Link>
           </div>
         </nav>
       </div>

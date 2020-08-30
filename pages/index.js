@@ -2,10 +2,14 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Prismic from 'prismic-javascript'
 import Hero from '../components/Home/Hero'
+import Head from 'next/head'
 
 const Index = ({ data }) => {
   return (
     <div className='container mx-auto'>
+      <Head>
+        <title>Projeto Parabéns</title>
+      </Head>
       <Hero data={data} />
       <Footer />
     </div>

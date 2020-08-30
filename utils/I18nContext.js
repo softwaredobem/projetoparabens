@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
 import { useRouter } from 'next/router'
+import paths from './paths.json'
 
 const I18nContext = createContext()
 
@@ -33,5 +34,6 @@ export const useI18n = translationsFile => {
   return {
     currentLang: i18n.currentLang,
     t: key => translationsFile[i18n.currentLang][key],
+    p: key => paths[i18n.currentLang][key],
   }
 }

@@ -1,0 +1,16 @@
+{
+  "pt-br": {
+    "home": "/",
+    "about": "/sobre-o-projeto",
+    "supporters": "/apoiadores",
+    "donate": "/donate",
+    "beAVolunteer": "/ser-voluntario"
+  },
+  "en-us": {
+    "home": "/en-us",
+    "about": "/en-us/about-the-project",
+    "supporters": "/en-us/supporters",
+    "donate": "/en-us/donate",
+    "beAVolunteer": "/en-us/be-a-volunteer"
+  }
+}

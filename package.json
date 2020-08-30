@@ -11,6 +11,8 @@
   "author": "Tulio Faria / DevPleno",
   "license": "MIT",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@next/bundle-analyzer": "^9.5.2",
     "next": "^9.5.1",
     "postcss-import": "^12.0.1",
     "prismic-javascript": "^3.0.2",

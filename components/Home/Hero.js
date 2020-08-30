@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from '../Menu'
 import Headline from './Headline'
-import { useI18n, translate } from '../../utils/I18nContext'
+import { useI18n } from '../../utils/I18nContext'
 import lang from './Hero.lang.json'
 
 const Hero = ({ data }) => {

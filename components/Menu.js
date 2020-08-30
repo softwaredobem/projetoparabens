@@ -1,6 +1,9 @@
 import React from 'react'
+import { useI18n } from '../utils/I18nContext'
+import lang from './Menu.lang.json'
 
 const Menu = () => {
+  const { t } = useI18n(lang)
   return (
     <React.Fragment>
       <div className='relative pt-6 px-4 sm:px-6 lg:px-8'>
@@ -44,25 +47,25 @@ const Menu = () => {
               href='#'
               className='font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out'
             >
-              Sobre o projeto
+              {t('about')}
             </a>
             <a
               href='#'
               className='ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out'
             >
-              Apoiadores
+              {t('supporters')}
             </a>
             <a
               href='#'
               className='ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out'
             >
-              Ser voluntário
+              {t('beAVolunteer')}
             </a>
             <a
               href='#'
               className='ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out'
             >
-              Doar
+              {t('donate')}
             </a>
           </div>
         </nav>

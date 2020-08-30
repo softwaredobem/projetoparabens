@@ -1,11 +1,12 @@
 import React from 'react'
 import '../css/styles.css'
+import { I18nContextProvider } from '../utils/I18nContext'
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <div>
+    <I18nContextProvider>
       <Component {...pageProps} />
-    </div>
+    </I18nContextProvider>
   )
 }
 

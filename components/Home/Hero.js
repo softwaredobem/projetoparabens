@@ -1,18 +1,11 @@
 import React from 'react'
-import Link from 'next/link'
-import Menu from '../components/Menu'
+import Menu from '../Menu'
+import Headline from './Headline'
+import { useI18n, translate } from '../../utils/I18nContext'
+import lang from './Hero.lang.json'
 
-const MenuItem = ({ href, label }) => {
-  return (
-    <li className='inline-block p-4 hover:bg-gray-100'>
-      <Link href={href}>
-        <a className='hover:underline'>{label}</a>
-      </Link>
-    </li>
-  )
-}
-
-const Header = () => {
+const Hero = ({ data }) => {
+  const { t } = useI18n(lang)
   return (
     <div className='relative bg-white overflow-hidden'>
       <div className='max-w-screen-xl mx-auto'>
@@ -31,17 +24,14 @@ const Header = () => {
           <main className='mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28'>
             <div className='sm:text-center lg:text-left'>
               <img src='/logo.png' />
-              <h2 className='text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl'>
-                Unimos corações generosos <br className='xl:hidden' />
-                <span className='text-indigo-600'>numa rede do bem!</span>
-              </h2>
+              <Headline headline={data.headline} />
               <div className='mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start'>
                 <div className='rounded-md shadow'>
                   <a
                     href='#'
                     className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10'
                   >
-                    Doar
+                    {t('donate')}
                   </a>
                 </div>
                 <div className='mt-3 sm:mt-0 sm:ml-3'>
@@ -49,7 +39,7 @@ const Header = () => {
                     href='#'
                     className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-300 transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10'
                   >
-                    Ser voluntário
+                    {t('beAVolunteer')}
                   </a>
                 </div>
               </div>
@@ -68,4 +58,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Hero

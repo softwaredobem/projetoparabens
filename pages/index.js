@@ -12,14 +12,14 @@ const Index = ({ data }) => {
   )
 }
 
-export async function getServerSideProps({ res }) {
-  res.setHeader('Cache-control', 's-maxage=2, stale-while-revalidate')
+export async function getStaticProps() {
   const client = Prismic.client('https://parabens.cdn.prismic.io/api/v2')
   const page = await client.getSingle('home')
   return {
     props: {
       data: page.data,
     },
+    revalidate: 10,
   }
 }
 

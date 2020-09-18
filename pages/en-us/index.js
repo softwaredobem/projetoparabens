@@ -1,19 +1,9 @@
 import React from 'react'
-import Footer from '../../components/Footer'
 import Prismic from 'prismic-javascript'
-import Hero from '../../components/Home/Hero'
-import Head from 'next/head'
+import Home from '../../components/Home'
 
 const Index = ({ data }) => {
-  return (
-    <div className='container mx-auto'>
-      <Head>
-        <title>Welcome to Projeto Parabéns</title>
-      </Head>
-      <Hero data={data} />
-      <Footer />
-    </div>
-  )
+  return <Home data={data} />
 }
 
 export async function getStaticProps() {

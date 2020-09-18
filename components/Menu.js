@@ -66,6 +66,14 @@ const Menu = () => {
                 {t('donate')}
               </a>
             </Link>
+            <div className='absolute top-0 right-0'>
+              <Link href={'/en-us'}>
+                <a className='ml-2 font-medium hover:text-indigo-900'>EN</a>
+              </Link>
+              <Link href={'/'}>
+                <a className='ml-2 font-medium hover:text-indigo-900'>PT</a>
+              </Link>
+            </div>
           </div>
         </nav>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from 'next/head'
+import Title from '../Title'
 import { RichText, Elements } from 'prismic-reactjs'
 import Layout from '../Layout'
 
@@ -38,9 +38,7 @@ const htmlRender = (type, element, content, children, key) => {
 const Supporters = ({ data }) => {
   return (
     <Layout>
-      <Head>
-        <title>{data.pagetitle}</title>
-      </Head>
+      <Title>{data.pagetitle}</Title>
       <div className='w-1/2 mx-auto'>
         <h2 className='mt-16 mb-6 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl'>
           <RichText render={data.headline} />

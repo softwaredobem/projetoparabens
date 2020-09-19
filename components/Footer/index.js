@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import { useI18n } from '../../utils/I18nContext'
+import lang from './lang.json'
 
 const Footer = () => {
+  const { t } = useI18n(lang)
   return (
     <footer className='text-gray-700 body-font'>
       <div className='container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col'>
@@ -9,10 +12,12 @@ const Footer = () => {
           <span className='ml-3 text-xl'>Associação Projeto Parabéns</span>
         </a>
         <p className='text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4'>
-          © 2020 Entidade sem fins lucrativos (CNPJ: 00.0000.0000){' '}
+          © {new Date().getFullYear()} {t('nonProfit')} (CNPJ:
+          29.800.758/0001-96) <br />
           <Link href='/en-us'>
             <a>English version</a>
-          </Link>{' '}
+          </Link>
+          {' / '}
           <Link href='/'>
             <a>Versão em português</a>
           </Link>

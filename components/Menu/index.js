@@ -1,6 +1,6 @@
 import React from 'react'
-import { useI18n } from '../utils/I18nContext'
-import lang from './Menu.lang.json'
+import { useI18n } from '../../utils/I18nContext'
+import lang from './lang.json'
 import Link from 'next/link'
 
 const Menu = () => {

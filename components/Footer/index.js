@@ -55,6 +55,13 @@ const Footer = () => {
               <path d='M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01'></path>
             </svg>
           </a>
+          <a
+            className='ml-3 text-gray-500'
+            href='https://www.vercel.com/?utm_source=softwaredobem/projetoparabens&utm_campaign=oss'
+          >
+            powered by:
+            <img className='h-6' src='/vercel.svg' />
+          </a>
         </span>
       </div>
     </footer>

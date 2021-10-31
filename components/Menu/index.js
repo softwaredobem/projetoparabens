@@ -66,14 +66,24 @@ const Menu = () => {
                 {t('donate')}
               </a>
             </Link>
-            <div className='absolute top-0 right-0'>
-              <Link href={'/en-us'}>
-                <a className='ml-2 font-medium hover:text-indigo-900'>EN</a>
-              </Link>
-              <Link href={'/'}>
-                <a className='ml-2 font-medium hover:text-indigo-900'>PT</a>
-              </Link>
-            </div>
+            <Link href={'/en-us'}>
+              <a className='ml-1 font-medium hover:text-indigo-900'>
+                <img
+                  src='/usa.png'
+                  className='h-6 inline-block pr-1'
+                  alt='EN'
+                />
+              </a>
+            </Link>
+            <Link href={'/'}>
+              <a className='ml-1 font-medium hover:text-indigo-900'>
+                <img
+                  src='/bra.png'
+                  className='h-6 inline-block pr-1'
+                  alt='PT'
+                />
+              </a>
+            </Link>
           </div>
         </nav>
       </div>
